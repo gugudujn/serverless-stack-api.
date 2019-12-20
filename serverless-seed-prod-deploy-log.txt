@@ -1,0 +1,51 @@
+INFO: before_deploy hook not found. You can define it in your build spec.
+INFO: Learn more about adding a build spec - seed.run/docs/adding-a-build-spec
+$ SLS_DEBUG=* serverless deploy -v --stage prod --package promote-artifacts --force 
+$ serverless info --verbose --stage prod 
+Serverless: DOTENV: Could not find .env file.
+Service Information
+service: notes-app-2-api
+stage: prod
+region: us-east-1
+stack: notes-app-2-api-prod
+resources: 61
+api keys:
+  None
+endpoints:
+  POST - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/notes
+  GET - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  GET - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/notes
+  PUT - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  POST - https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod/billing
+functions:
+  create: notes-app-2-api-prod-create
+  get: notes-app-2-api-prod-get
+  list: notes-app-2-api-prod-list
+  update: notes-app-2-api-prod-update
+  delete: notes-app-2-api-prod-delete
+  billing: notes-app-2-api-prod-billing
+layers:
+  None
+Stack Outputs
+UpdateLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-update:1
+BillingLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-billing:1
+ListLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-list:1
+ServerlessDeploymentBucketName: notes-app-2-api-prod-serverlessdeploymentbucket-1f05q70ikno3s
+AttachmentsBucketName: notes-app-2-api-prod-attachmentsbucket-1gk22vyr34sfe
+UserPoolClientId: 51jvus5p6jd6dup1s1juj68aif
+UserPoolId: us-east-1_avNRlpGuk
+DeleteLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-delete:1
+CreateLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-create:1
+GetLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-prod-get:1
+EnterpriseLogAccessIamRole: arn:aws:iam::953323012695:role/notes-app-2-api-prod-EnterpriseLogAccessIamRole-1WUI3Q53SDYED
+IdentityPoolId: us-east-1:0e9b3690-6dda-4cee-b8ba-60b1c1d971d3
+ServiceEndpoint: https://5fov2yg6uh.execute-api.us-east-1.amazonaws.com/prod
+Run "serverless dashboard" to open the dashboard or visit https://dashboard.serverless.com/tenants/gugudu/applications/notes-app-api-app/services/notes-app-2-api/stage/prod/region/us-east-1
+INFO: after_deploy hook not found. You can define it in your build spec.
+INFO: Learn more about adding a build spec - seed.run/docs/adding-a-build-spec
+
+
+TEST CONFIGURED URLS
+aws2 cognito-idp sign-up --region us-east-1 --client-id 51jvus5p6jd6dup1s1juj68aif --username admin@example.com --password Passw0rd!
+aws cognito-idp admin-confirm-sign-up --region YOUR_DEV_COGNITO_REGION --user-pool-id YOUR_DEV_COGNITO_USER_POOL_ID --username admin@example.com
