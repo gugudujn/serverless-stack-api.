@@ -1,0 +1,42 @@
+Service Information
+service: notes-app-2-api
+stage: dev
+region: us-east-1
+stack: notes-app-2-api-dev
+resources: 62
+api keys:
+  None
+endpoints:
+  POST - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/notes
+  GET - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
+  GET - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/notes
+  PUT - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
+  DELETE - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
+  POST - https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev/billing
+functions:
+  create: notes-app-2-api-dev-create
+  get: notes-app-2-api-dev-get
+  list: notes-app-2-api-dev-list
+  update: notes-app-2-api-dev-update
+  delete: notes-app-2-api-dev-delete
+  billing: notes-app-2-api-dev-billing
+layers:
+  None
+
+Stack Outputs
+UpdateLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-update:1
+BillingLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-billing:1
+ListLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-list:1
+ServerlessDeploymentBucketName: notes-app-2-api-dev-serverlessdeploymentbucket-rnd3h31tj0h6
+AttachmentsBucketName: notes-app-2-api-dev-attachmentsbucket-5fbivsl1dbcg
+UserPoolClientId: 736t0cvsf0sq5o4p646fa7o05o
+UserPoolId: us-east-1_dXGtwH8y4
+DeleteLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-delete:1
+CreateLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-create:1
+GetLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:953323012695:function:notes-app-2-api-dev-get:1
+EnterpriseLogAccessIamRole: arn:aws:iam::953323012695:role/notes-app-2-api-dev-EnterpriseLogAccessIamRole-J10OY0QL7API
+IdentityPoolId: us-east-1:aaf32f7f-f23e-4094-801d-697ea4e9793e
+ServiceEndpoint: https://vb5blij5ii.execute-api.us-east-1.amazonaws.com/dev
+
+Serverless: Publishing service to the Serverless Dashboard...
+Serverless: Successfully published your service to the Serverless Dashboard: https://dashboard.serverless.com/tenants/gugudu/applications/notes-app-api-app/services/notes-app-2-api/stage/dev/region/us-east-1
