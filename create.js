@@ -3,7 +3,6 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 
 export async function main(event, context) {
-  uuid.abc.gibberish;
   console.log("inside function==>");
   const data = JSON.parse(event.body);
   console.log("event.body==>" + data);
