@@ -46,6 +46,3 @@ INFO: after_deploy hook not found. You can define it in your build spec.
 INFO: Learn more about adding a build spec - seed.run/docs/adding-a-build-spec
 
 
-TEST CONFIGURED URLS
-aws2 cognito-idp sign-up --region us-east-1 --client-id 51jvus5p6jd6dup1s1juj68aif --username admin@example.com --password Passw0rd!
-aws cognito-idp admin-confirm-sign-up --region YOUR_DEV_COGNITO_REGION --user-pool-id YOUR_DEV_COGNITO_USER_POOL_ID --username admin@example.com
